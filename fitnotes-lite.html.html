@@ -109,6 +109,47 @@
       list-style: none;
       padding-left: 0;
     }
+
+    /*
+      Responsive tweaks for small screens (like iPhone).
+      On narrow viewports we stack the header elements, make the
+      navigation bar wrap into two rows, and ensure buttons and
+      controls span the available width. We also slightly reduce
+      font sizes so everything fits comfortably.
+    */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      nav button {
+        flex: 1 1 48%;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+      main {
+        padding: 0.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      .btn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
   </style>
 </head>
 <body>
